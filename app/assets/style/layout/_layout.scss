@@ -1,0 +1,21 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  .logo {
+    width: 174.42px;
+    height: 42px;
+  }
+}
+
+.footer p {
+  line-height: 19px;
+}
+
+.sub-title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 700;
+}

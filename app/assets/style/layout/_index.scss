@@ -1,0 +1,192 @@
+.banner {
+  background-image: url(../images/bg_home_mobile.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 336px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include lg {
+    background-image: url(../images/bg_home.jpg);
+    height: 100vh;
+  }
+
+  &-title {
+    border: 1px solid $white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      top: -5px;
+    }
+
+    &::before {
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      right: 0;
+      transform: translateX(50%);
+    }
+
+    @include md {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 35px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: $white;
+        bottom: -5px;
+      }
+
+      &::before {
+        left: 0;
+        transform: translateX(-50%);
+      }
+
+      &::after {
+        right: 0;
+        transform: translateX(50%);
+      }
+
+      @include lg {
+        font-size: 48px;
+        line-height: 70px;
+      }
+
+      span {
+        display: block;
+        color: transparent;
+        background-image: linear-gradient(180deg, $secondary,$primary);
+        background-clip: text;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+
+      @include md {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.feature {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  @include lg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .material-icons {
+    font-size: 50px;
+    margin-bottom: 1.5rem;
+    color: transparent;
+    background-image: linear-gradient(180deg, $secondary,$primary);
+    background-clip: text;
+
+    @include lg {
+      background-image: none;
+      background-clip: none;
+      color: $white;
+    }
+  }
+
+  &-item {
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: $dark;
+
+    @include lg {
+      background-color: transparent;
+      &:hover {
+        border-color: $primary;
+        background-color: $dark;
+
+        .material-icons {
+          color: transparent;
+          background-image: linear-gradient(180deg, $secondary,$primary);
+          background-clip: text;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+
+.process {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &-list {
+    fieldset {
+      border-radius: 12px;
+      padding: 18px 3rem 3rem 3rem;
+      border: 1px solid $white;
+      height: 100%;
+    }
+
+    legend {
+      /*  蓋掉 BS 的 css reboot  */
+      float: none;
+      width: auto;
+
+      color: $primary;
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 700;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 35px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
