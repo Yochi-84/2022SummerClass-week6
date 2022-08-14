@@ -1,0 +1,92 @@
+.course-card {
+  border: 2px solid $white;
+  border-radius: $border-radius-lg;
+  background-color: $light;
+  height: 100%;
+  font-family: 'Noto Sans TC', serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &-header,
+  &-footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &-body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: auto;
+  }
+
+  &-footer {
+    border-top: 1px solid $white;
+  }
+
+  &-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+
+  &-speaker {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  &-name {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 700;
+    min-height: 59px;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  &-tag {
+    display: block;
+    color: $primary;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  &-content {
+    text-align: justify;
+  }
+
+  &-link{
+    &:hover {
+      color: $white;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: $border-radius-lg;
+    }
+  }
+
+  &-hours {
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  &-price {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 37px;
+    vertical-align: middle;
+  }
+
+  &-hover:hover {
+    @include lg {
+      border-color: $primary;
+    }
+  }
+}

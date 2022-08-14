@@ -70,6 +70,11 @@
       }
 
       @include lg {
+        font-size: 36px;
+        line-height: 52px;
+      }
+
+      @include xl {
         font-size: 48px;
         line-height: 70px;
       }
@@ -95,14 +100,6 @@
 }
 
 .feature {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-
-  @include lg {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
   .material-icons {
     font-size: 50px;
     margin-bottom: 1.5rem;
@@ -151,14 +148,10 @@
   }
 }
 
-
 .process {
-  padding-top: 80px;
-  padding-bottom: 80px;
-
   &-list {
     fieldset {
-      border-radius: 12px;
+      border-radius: $border-radius;
       padding: 18px 3rem 3rem 3rem;
       border: 1px solid $white;
       height: 100%;
@@ -187,6 +180,122 @@
     p {
       font-size: 18px;
       line-height: 26px;
+    }
+  }
+}
+
+.program {
+  ul {
+    margin-left: 1rem;
+    column-gap: 0.5rem;
+    overflow-x: auto;
+
+    @include lg {
+      column-gap: 1rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 1rem;
+    border: 1px solid $white;
+    border-radius: $border-radius-sm;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    @include lg {
+      font-size: 18px;
+      padding: 1.5rem 2rem;
+      transition: 0.3s;
+
+      &:hover {
+        color: $dark;
+        background-image: linear-gradient(90deg, $secondary,$primary) ;
+      }
+    }
+  }
+}
+
+.solution {
+  li {
+    background-image: var(--bgImg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+
+    @include lg {
+      padding-top: 13.5rem;
+      padding-bottom: 13.5rem;
+      &:hover {
+        &::after {
+          opacity: 0.12;
+        }
+
+        .solution-block {
+          filter: none;;
+        }
+
+        p {
+          opacity: 1;
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $dark;
+      opacity: 0.9;
+      inset: 0;
+      transition: 0.3s;
+    }
+  }
+
+  &-block {
+    position: relative;
+    z-index: 1;
+
+    @include lg {
+      filter: grayscale(1);
+      transition: 0.3s;
+    }
+
+    .material-icons {
+      font-size: 32px;
+      color: $primary;
+      user-select: none;
+      margin-bottom: 1.125rem;
+    }
+
+    h3 {
+      margin-bottom: 3rem;
+      font-size: 24px;
+      line-height: 35px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+      opacity: 0.8;
+      transition: 0.3s;
+
+      @include lg {
+        opacity: 0.5;
+      }
     }
   }
 }

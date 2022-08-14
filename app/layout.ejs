@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%- title %></title>
-    <link rel="shortcut icon" href="./assets/images/logo2.svg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo2.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
 
@@ -15,30 +21,35 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-gradient">
       <div class="container">
         <a class="navbar-brand py-0" href="#"
-          ><img src="./assets/images/logo.svg" alt="Coding Home" class="logo d-none d-md-block"
-        /><img src="./assets/images/logo2.svg" alt="Coding Home" class="logo d-md-none"
+          ><img
+            src="./assets/images/logo.svg"
+            alt="Coding Home"
+            class="logo d-none d-md-block" /><img
+            src="./assets/images/logo2.svg"
+            alt="Coding Home"
+            class="logo d-md-none"
         /></a>
-        <button
-          class="navbar-toggler border-0
-          type="button"
+        <span
+          class="material-icons text-primary navbar-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          >drag_handle</span
         >
-          <span class="material-icons text-primary">drag_handle</span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-lg-0 mb-2 pt-6 pt-lg-0">
+          <ul class="navbar-nav ms-auto mb-lg-0 pt-lg-0 mb-2 pt-6">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">首頁</a>
+              <a class="nav-link <%- current === 'index' ? 'active' : '' %>" aria-current="page" href="#">首頁</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <%- current === 'course' ? 'active' : '' %>">
               <a class="nav-link" href="#">課程介紹</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link pe-0 d-flex ailgn-items-center" href="#"><span class="material-icons me-1">account_circle</span>登入</a>
+            <li class="nav-item <%- current === 'login' ? 'active' : '' %>">
+              <a class="nav-link pe-0 d-flex ailgn-items-center" href="#"
+                ><span class="material-icons me-1">account_circle</span>登入</a
+              >
             </li>
           </ul>
         </div>
@@ -47,7 +58,7 @@
 
     <%- contents %>
 
-    <footer class="footer bg-dark text-center py-6">
+    <footer class="footer bg-dark py-6 text-center">
       <p>Coding Home © 2022 All Rights Reserved</p>
     </footer>
 

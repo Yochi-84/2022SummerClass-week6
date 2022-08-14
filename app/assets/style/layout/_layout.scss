@@ -5,8 +5,21 @@
   z-index: 10;
 
   .logo {
-    width: 174.42px;
-    height: 42px;
+    width: 23.88px;
+    height: 24px;
+
+    @include md{
+      width: 174.42px;
+      height: 42px;
+    }
+  }
+
+  a[class^="navbar"] {
+    line-height: 1;
+  }
+
+  .navbar-toggler {
+    cursor: pointer;
   }
 }
 
@@ -18,4 +31,14 @@
   font-size: 28px;
   line-height: 40px;
   font-weight: 700;
+}
+
+.block-py {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  @include lg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
