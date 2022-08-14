@@ -120,9 +120,12 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: $dark;
+    cursor: default;
+    transition: 0.3s;
 
     @include lg {
       background-color: transparent;
+
       &:hover {
         border-color: $primary;
         background-color: $dark;
@@ -168,6 +171,7 @@
       font-weight: 700;
       padding-right: 0.5rem;
       padding-left: 0.5rem;
+      font-family: $font-secondary;
     }
 
     h3 {
@@ -295,6 +299,308 @@
 
       @include lg {
         opacity: 0.5;
+      }
+    }
+  }
+}
+
+.chapter {
+  &-block {
+    position: relative;
+    border-radius: $border-radius;
+
+    // a 連結清除浮動
+    &::after {
+      content: '';
+      display: block;
+      clear: right;
+    }
+
+    @include lg {
+      padding: 2rem;
+
+      &:hover {
+        h3 {
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            border-width: 1px;
+            border-style: solid;
+            border-top-color: $primary;
+            border-bottom-color: transparent;
+          }
+
+          &::before {
+            left: 0;
+            border-left-color: $primary;
+            border-right-color: transparent;
+            border-top-left-radius: $border-radius;
+          }
+
+          &::after {
+            right: 0;
+            border-right-color: $primary;
+            border-left-color: transparent;
+            border-top-right-radius: $border-radius;
+          }
+        }
+
+        p {
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 32px;
+            height: 32px;
+            border-width: 1px;
+            border-style: solid;
+            border-bottom-color: $primary;
+            border-top-color: transparent;
+          }
+
+          &::before {
+            left: 0;
+            border-left-color: $primary;
+            border-right-color: transparent;
+            border-bottom-left-radius: $border-radius;
+          }
+
+          &::after {
+            right: 0;
+            border-right-color: $primary;
+            border-left-color: transparent;
+            border-bottom-right-radius: $border-radius;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      float:right;
+      text-transform: uppercase;
+      color: $primary;
+      font-size: 18px;
+      line-height: 21px;
+      font-family: $font-secondary;
+
+      @include lg {
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+        }
+      }
+    }
+  }
+}
+
+.feedback {
+  background-image: url("../images/bg_share.jpg");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  &-block {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    column-gap: 10%;
+    margin-bottom: 5rem;
+
+    @include lg {
+      row-gap: 1.5rem;
+      margin-bottom: 10rem;
+      padding-left: calc(100% / 24);
+      padding-right: calc(100% / 24);
+    }
+  }
+
+  &-image {
+    border-radius: $border-radius-lg;
+    position: relative;
+    margin-bottom: 13px;
+
+    @include lg {
+      width: 55.5555556%;
+      margin-right: -6%;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      border: 1px solid #7c7e77;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border-radius: $border-radius-lg;
+      right: 5px;
+      top: 5px; 
+
+      @include lg {
+        right: 10px;
+        top: 10px;
+      }
+    }
+
+    img {
+      position: relative;
+      border-radius: $border-radius-lg;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &-content {
+    display: inline-block;
+    background-color: $white;
+    padding: 1.5rem;
+    position: relative;
+    border-radius: $border-radius-lg $border-radius-lg $border-radius-lg 0;
+    color: $text;
+    z-index: 2;
+
+    @include lg {
+      padding: 2rem;
+      width: 44.444444%;
+      align-self: flex-end;
+      margin-bottom: -3rem;
+      margin-left: -6%;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      right: 2rem;
+
+      @include lg {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+
+      @include lg {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include lg {
+      width: 55.5555556%;
+      margin-right: -6%;
+    }
+
+    .material-icons {
+      color: $primary;
+      transition: 0.3s;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  &-controller {
+    a {
+      background-color: $primary;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+
+    &.active a{
+      width: 16px;
+    }
+  }
+
+  &-reserve {
+    border-radius: $border-radius-lg;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+
+    @include md {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+      text-align: left;
+      column-gap: 3rem;
+    }
+
+    .material-icons {
+      font-size: 80px;
+      color: #909090;
+      margin-bottom: 1.5rem;
+
+      @include md {
+        margin-bottom: 0;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 35px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+
+      @include md {
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+
+      @include md {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 0;
       }
     }
   }
