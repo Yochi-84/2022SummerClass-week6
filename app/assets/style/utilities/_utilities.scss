@@ -1,14 +1,16 @@
 .border-gradient {
-  position: relative;
-
   &::after {
     content: '';
-    position: absolute;
+    position: fixed;
     left: 0;
-    bottom: -2px;
+    top: 72px;
     background-image: linear-gradient(90deg, $secondary 50%,$primary 50%);
     height: 2px;
     width: 100%;
+
+    @include lg {
+      top: 90px;
+    }
   }
 }
 

@@ -42,9 +42,12 @@
     font-size: 20px;
     line-height: 29px;
     font-weight: 700;
-    min-height: 59px;
     text-align: left;
     margin-bottom: 0.5rem;
+
+    @include md {
+      min-height: 59px;
+    }
   }
 
   &-tag {
