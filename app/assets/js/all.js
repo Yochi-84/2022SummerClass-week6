@@ -1,4 +1,4 @@
-const scrollContainer = document.querySelector(".program ul");
+const scrollContainer = document.querySelector(".item-tag ul");
 
 scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();

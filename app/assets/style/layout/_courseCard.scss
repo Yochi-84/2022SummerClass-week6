@@ -1,8 +1,6 @@
 .course-card {
-  border: 2px solid $white;
   border-radius: $border-radius-lg;
   background-color: $light;
-  height: 100%;
   font-family: 'Noto Sans TC', serif;
   display: flex;
   flex-direction: column;
@@ -10,20 +8,7 @@
 
   &-header,
   &-footer {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     text-align: center;
-  }
-
-  &-body {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 2rem;
-    margin-bottom: auto;
-  }
-
-  &-footer {
-    border-top: 1px solid $white;
   }
 
   &-image {
@@ -35,7 +20,6 @@
 
   &-speaker {
     font-size: 16px;
-    margin-bottom: 0.5rem;
   }
 
   &-name {
@@ -43,11 +27,6 @@
     line-height: 29px;
     font-weight: 700;
     text-align: left;
-    margin-bottom: 0.5rem;
-
-    @include md {
-      min-height: 59px;
-    }
   }
 
   &-tag {
@@ -61,23 +40,10 @@
     text-align: justify;
   }
 
-  &-link{
-    &:hover {
-      color: $white;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: $border-radius-lg;
-    }
-  }
-
   &-hours {
     display: inline-block;
-    margin-right: 0.5rem;
     vertical-align: middle;
+    margin-right: 0.5rem;
   }
 
   &-price {
@@ -91,6 +57,119 @@
   &-hover:hover {
     @include lg {
       border-color: $primary;
+    }
+  }
+
+  &-normal {
+    height: 100%;
+    border: 2px solid $white;
+
+    .course-card-header,
+    .course-card-footer {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .course-card-body {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 2rem;
+      margin-bottom: auto;
+    }
+
+    .course-card-footer {
+      border-top: 1px solid $white;
+    }
+
+    .course-card-speaker {
+      margin-bottom: 0.5rem;
+    }
+
+    .course-card-name {
+      margin-bottom: 0.5rem;
+      @include md {
+        min-height: 59px;
+      }
+    }
+
+    .course-card-link{
+      &:hover {
+        color: $white;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: $border-radius-lg;
+      }
+    }
+  }
+
+  &-fluid {
+    padding: 2rem 1.5rem;
+    column-gap: 3rem;
+
+    @include lg {
+      flex-direction: row;
+      padding: 3rem;
+    }
+
+    .course-card-body {
+      flex-grow: 1;
+    }
+
+    .course-card-name {
+      margin-bottom: 0.25rem;
+
+      @include lg {
+        font-size: 24px;
+        line-height: 35px;
+      }
+    }
+
+    .course-card-content {
+      margin-bottom: 3rem;
+
+      @include md {
+        margin-bottom: 0;
+      }
+    }
+
+    .course-card-hours {
+      @include lg {
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .course-card-link {
+      display: flex;
+      column-gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+
+      @include md {
+        flex-wrap: wrap;
+
+        span {
+          width: 100%;
+        }
+      }
+    }
+
+    .course-card-btn {
+      display: flex;
+      column-gap: 0.5rem;
+
+      a {
+        flex-grow: 1;
+      }
+
+      @include md {
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+      }
     }
   }
 }
