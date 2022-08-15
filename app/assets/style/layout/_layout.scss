@@ -8,10 +8,25 @@
   .logo {
     width: 23.88px;
     height: 24px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: url("../images/logo2.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-sizing: content-box;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    a {
+      display: block;
+      height: 100%;
+    }
 
     @include lg {
       width: 174.42px;
       height: 42px;
+      background-image: url("../images/logo.svg");
     }
   }
 

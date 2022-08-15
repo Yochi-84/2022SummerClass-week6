@@ -1,0 +1,36 @@
+.steps {
+  &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   background-color: $gray;
+    //   height: 2px;
+    //   width: 1rem;
+    //   top: 10px;
+    //   left: 20px;
+    // }
+  }
+
+  &-num {
+    background-color: $light;
+    font-size: 12px;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $gray;
+    border-radius: 50%;
+    font-family: $font-secondary;
+    margin-bottom: 0.25rem;
+  }
+
+  &-name {
+
+  }
+}

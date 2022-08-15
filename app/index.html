@@ -10,10 +10,10 @@ current: index
   <div class="container">
     <div class="row mx-0">
       <div class="banner-title col-md-6 mx-auto text-center">
-        <h1 class="mb-6">
+        <h2 class="mb-6">
           <span>全台最豐富的程式家教</span>
           在實踐中化理想為現實
-        </h1>
+        </h2>
         <p>全台最專業師資｜到府程式家教｜客製化課程</p>
       </div>
     </div>
@@ -114,25 +114,27 @@ current: index
     <h2 class="sub-title mb-lg-16 underline-primary mb-10 text-center">
       你想要學習的程式，<br class="d-lg-none" />都在這裡
     </h2>
-    <ul class="d-flex ms-4">
-      <li><a href="#">JavaScript</a></li>
-      <li><a href="#">HTML/CSS</a></li>
-      <li><a href="#">SQL</a></li>
-      <li><a href="#">Java</a></li>
-      <li><a href="#">Bash/Shell</a></li>
-      <li><a href="#">Python</a></li>
-      <li><a href="#">Ruby</a></li>
-      <li><a href="#">PHP</a></li>
-      <li><a href="#">C++</a></li>
-      <li><a href="#">C#</a></li>
-      <li><a href="#">Swift</a></li>
-      <li><a href="#">Go</a></li>
-      <li><a href="#">Scala</a></li>
-      <li><a href="#">Kotlin</a></li>
-      <li><a href="#">Dart</a></li>
-      <li><a href="#">Rust</a></li>
-      <li><a href="#">R</a></li>
-    </ul>
+    <div class="swiper programSwiper">
+      <ul class="ms-4 swiper-wrapper">
+        <li class="swiper-slide"><a href="#">JavaScript</a></li>
+        <li class="swiper-slide"><a href="#">HTML/CSS</a></li>
+        <li class="swiper-slide"><a href="#">SQL</a></li>
+        <li class="swiper-slide"><a href="#">Java</a></li>
+        <li class="swiper-slide"><a href="#">Bash/Shell</a></li>
+        <li class="swiper-slide"><a href="#">Python</a></li>
+        <li class="swiper-slide"><a href="#">Ruby</a></li>
+        <li class="swiper-slide"><a href="#">PHP</a></li>
+        <li class="swiper-slide"><a href="#">C++</a></li>
+        <li class="swiper-slide"><a href="#">C#</a></li>
+        <li class="swiper-slide"><a href="#">Swift</a></li>
+        <li class="swiper-slide"><a href="#">Go</a></li>
+        <li class="swiper-slide"><a href="#">Scala</a></li>
+        <li class="swiper-slide"><a href="#">Kotlin</a></li>
+        <li class="swiper-slide"><a href="#">Dart</a></li>
+        <li class="swiper-slide"><a href="#">Rust</a></li>
+        <li class="swiper-slide"><a href="#">R</a></li>
+      </ul>
+</div>
   </div>
 </section>
 <!-- s5. course -->
@@ -280,31 +282,50 @@ current: index
     <div class="row">
       <div class="feedback-block col-lg-10 mx-auto">
         <div class="feedback-image">
-          <img src="./assets/images/share.jpg" alt="專屬你的學習課程超過 3000 位學員得到了程式超能力">
+          <div class="swiper imageSwiper">
+            <div class="feedback-image-box swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/share.jpg" alt="專屬你的學習課程超過 3000 位學員得到了程式超能力">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://picsum.photos/400/300/?random=12" alt="專屬你的學習課程超過 3000 位學員得到了程式超能力">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://picsum.photos/400/300/?random=15" alt="專屬你的學習課程超過 3000 位學員得到了程式超能力">
+              </div>
+              <div class="swiper-slide">
+                <img src="https://picsum.photos/400/300/?random=18" alt="專屬你的學習課程超過 3000 位學員得到了程式超能力">
+              </div>
+            </div>
+          </div>
         </div>
         <div class="feedback-content">
-          <img src="./assets/images/student01.jpg" alt="學生">
+          <div class="swiper studentSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/student01.jpg" alt="學生">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/student02.jpg" alt="學生">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/student03.jpg" alt="學生">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/student04.jpg" alt="學生">
+              </div>
+            </div>
+          </div>
           <h3>老師很有耐心</h3>
           <p>老師手把手的細心教學，用手繪圖，以淺顯易懂的方式，讓零網頁基礎的我也能快速了解網頁的架構與原理，學網頁變得有趣多了！</p>
         </div>
         <ul class="feedback-control gap-2">
           <li class="me-2">
-            <a href="#" class="d-flex align-items-center"><span class="material-icons">west</span></a>
+            <a href="#" class="d-flex align-items-center swiper-prev"><span class="material-icons">west</span></a>
           </li>
-          <li class="feedback-controller">
-            <a href="#"></a>
-          </li>
-          <li class="feedback-controller">
-            <a href="#"></a> 
-          </li>
-          <li class="feedback-controller active">
-            <a href="#"></a>
-          </li>
-          <li class="feedback-controller">
-            <a href="#"></a>
-          </li>
+          <li class="feedback-controller"></li>
           <li class="ms-2">
-            <a href="#" class="d-flex align-items-center"><span class="material-icons">east</span></a>
+            <a href="#" class="d-flex align-items-center swiper-next"><span class="material-icons">east</span></a>
           </li>
         </ul>
       </div>

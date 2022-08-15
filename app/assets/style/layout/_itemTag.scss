@@ -1,15 +1,21 @@
 .item-tag {
-  ul {
-    column-gap: 0.5rem;
-    overflow-x: auto;
+  // 手刻
+  // ul {
+  //   column-gap: 0.5rem;
+  //   overflow-x: auto;
 
-    @include lg {
-      column-gap: 1rem;
-    }
+  //   @include lg {
+  //     column-gap: 1rem;
+  //   }
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  //   &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+
+  // 給 swiper 取寬度用
+  li {
+    width: auto;
   }
 
   a {
