@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%- title %></title>
+    <title>Coding Home</title>
     <link
       rel="shortcut icon"
       href="./assets/images/logo2.svg"
@@ -20,15 +20,9 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-gradient pb-0">
       <div class="container">
-        <a class="navbar-brand" href="./index.html"
-          ><img
-            src="./assets/images/logo.svg"
-            alt="Coding Home"
-            class="logo d-none d-lg-block" /><img
-            src="./assets/images/logo2.svg"
-            alt="Coding Home"
-            class="logo d-lg-none"
-        /></a>
+        <h1 class="logo navbar-brand">
+          <a href="./index.html">Coding Home</a>
+        </h1>
         <button href="#" class="navbar-toggler" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
@@ -40,10 +34,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto py-3">
             <li class="nav-item text-center">
-              <a class="nav-link <%- current === 'index' ? 'active' : '' %>" <%- current === 'index' ?'aria-current="page"' : '' %> href="./index.html">首頁</a>
+              <a class="nav-link "  href="./index.html">首頁</a>
             </li>
             <li class="nav-item text-center">
-              <a class="nav-link <%- current === 'course' ? 'active' : '' %>" <%- current === 'course' ?'aria-current="page"' : '' %> href="./course.html">課程介紹</a>
+              <a class="nav-link "  href="./course.html">課程介紹</a>
             </li>
             <li class="nav-item">
               <a class="nav-link pe-0 d-flex ailgn-items-center justify-content-center" href="#" data-bs-toggle="modal" data-bs-target="#login-modal"
@@ -56,7 +50,28 @@
     </nav>
 
     <main class="main">
-      <%- contents %>
+      <section class="steps bg-dark">
+  <div class="container">
+    <div class="row">
+      <ul class="d-flex col-md-8 mx-md-auto pb-6 pt-6 pb-md-4">
+        <li class="steps-item">
+          <a href="#">
+            <span class="steps-num">1</span>
+            <h6 class="steps-name">課程報名</h6>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="reserve">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-8"></div>
+    </div>
+  </div>
+</section>
     </main>
 
     <footer class="footer bg-dark py-6 text-center">
