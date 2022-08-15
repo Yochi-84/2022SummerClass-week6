@@ -79,6 +79,7 @@ $danger:        $red !default;
 $light:         #2D2D2D;
 $dark:          #1C1C1C;
 $text:          #494755;
+$gray:          #C1C1C1;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -92,7 +93,8 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   "text":       $text,
-  "white":      $white
+  "white":      $white,
+  "gray":       $gray,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1255,7 +1257,7 @@ $modal-dialog-margin-y-sm-up:       1.75rem !default;
 
 $modal-title-line-height:           $line-height-base !default;
 
-$modal-content-color:               null !default;
+$modal-content-color:               $gray !default;
 $modal-content-bg:                  $white !default;
 $modal-content-border-color:        rgba($black, .2) !default;
 $modal-content-border-width:        $border-width !default;
@@ -1276,10 +1278,10 @@ $modal-header-padding:              $modal-header-padding-y $modal-header-paddin
 
 $modal-sm:                          300px !default;
 $modal-md:                          500px !default;
-$modal-lg:                          800px !default;
+$modal-lg:                          636px !default;
 $modal-xl:                          1140px !default;
 
-$modal-fade-transform:              translate(0, -50px) !default;
+$modal-fade-transform:              translate(0, -100px) !default;
 $modal-show-transform:              none !default;
 $modal-transition:                  transform .3s ease-out !default;
 $modal-scale-transform:             scale(1.02) !default;

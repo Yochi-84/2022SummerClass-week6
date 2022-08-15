@@ -40,13 +40,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto py-3">
             <li class="nav-item text-center">
-              <a class="nav-link <%- current === 'index' ? 'active' : '' %>" aria-current="page" href="#">首頁</a>
+              <a class="nav-link <%- current === 'index' ? 'active' : '' %>" <%- current === 'index' ?'aria-current="page"' : '' %> href="./index.html">首頁</a>
             </li>
             <li class="nav-item text-center">
-              <a class="nav-link <%- current === 'course' ? 'active' : '' %>" href="#">課程介紹</a>
+              <a class="nav-link <%- current === 'course' ? 'active' : '' %>" <%- current === 'course' ?'aria-current="page"' : '' %> href="./course.html">課程介紹</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pe-0 d-flex ailgn-items-center justify-content-center <%- current === 'login' ? 'active' : '' %>" href="#"
+              <a class="nav-link pe-0 d-flex ailgn-items-center justify-content-center" href="#" data-bs-toggle="modal" data-bs-target="#login-modal"
                 ><span class="material-icons me-1">account_circle</span>登入</a
               >
             </li>
@@ -62,6 +62,30 @@
     <footer class="footer bg-dark py-6 text-center">
       <p>Coding Home © 2022 All Rights Reserved</p>
     </footer>
+
+
+    <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="Label" aria-hidden="true" data-bs-backdrop="false">
+      <div class="modal-dialog modal-lg login-modal modal-dialog-centered">
+        <div class="modal-content bg-light rounded-0 border">
+          <div class="modal-body">
+            <div class="modal-block">
+              <h4 class="modal-title" id="Label">登入</h4>
+              <a type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span class="material-icons">close</span></a>
+              <form action="#" class="mb-6 mb-12">
+                <label for="email">信箱</label>
+                <input type="email" id="email" placeholder="請輸入信箱" class="mb-4 mb-md-8">
+                <label for="password">密碼</label>
+                <input type="password" id="password" placeholder="請輸入密碼" class="mb-4 mb-md-6">
+                <a href="#" class="btn btn-gradient btn-fluid rounded-ssm">登入</a>
+              </form>
+              <h5 class="other-method">其他登入方式</h5>
+              <a href="#" class="btn btn-outline-white btn-fluid rounded-ssm mb-4 mb-md-6"><img src="./assets/images/icon_fb.svg" alt="Facebook" class="me-8 me-md-14">Facebook 登入</a>
+              <a href="#" class="btn btn-outline-white btn-fluid rounded-ssm"><img src="./assets/images/icon_google.svg" alt="Google" class="me-8 me-md-14">Google 登入</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>

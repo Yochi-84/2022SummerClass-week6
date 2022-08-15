@@ -1,0 +1,94 @@
+.login-modal {
+  .modal-body {
+    text-align: center;
+    padding: 1rem 1.5rem;
+
+    @include md {
+      padding: 2.5rem 1.5rem 3rem;
+    }
+  }
+
+  .modal-block {
+    @include md {
+      width: 52%;
+      margin: 0 auto;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+
+    @include md {
+      top: 1.875rem;
+    }
+  }
+
+  .modal-title {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: $white;
+
+    @include md {
+      margin-bottom: 2rem;
+    }
+  }
+
+  form {
+    text-align: left;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  input {
+    width: 100%;
+    background-color: $dark;
+    border: 1px solid $white;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    color: $white;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  .other-method {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 1rem;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      width: 1rem;
+      background-color: $gray;
+      flex-grow: 1;
+    }
+
+    &::before {
+      margin-right: 1rem;
+    }
+
+    &::after {
+      margin-left: 1rem;
+    }
+  }
+
+  a.btn {
+    font-family: $font-primary;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
