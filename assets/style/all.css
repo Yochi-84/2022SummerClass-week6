@@ -16880,7 +16880,7 @@ html ::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.feedback-content .swiper {
+.feedback-content .student-image {
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -16894,7 +16894,7 @@ html ::-webkit-scrollbar-thumb:hover {
 }
 
 @media screen and (min-width: 992px) {
-  .feedback-content .swiper {
+  .feedback-content .student-image {
     width: 100px;
     height: 100px;
   }
@@ -16958,9 +16958,6 @@ html ::-webkit-scrollbar-thumb:hover {
   width: 8px;
   height: 8px;
   border-radius: 4px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .feedback-controller a:hover {

@@ -28,28 +28,25 @@ var programSwiper = new Swiper(".programSwiper", {
     }
   }
 });
-var imageSwiper = new Swiper(".imageSwiper", {
-  cssMode: true,
-  slidesPerView: 'auto',
-  loop: true,
-  autoplay: true,
-  disableOnInteraction: false,
-  navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev"
-  },
-  pagination: {
-    el: ".feedback-controller",
-    bulletElement: 'a',
-    clickable: true
-  }
-});
 var studentSwiper = new Swiper(".studentSwiper", {
+  slidesPerView: 'auto'
+});
+var commentSwiper = new Swiper(".commentSwiper", {
+  slidesPerView: 'auto'
+});
+var imageSwiper = new Swiper(".imageSwiper", {
+  controller: {
+    control: [studentSwiper, commentSwiper],
+    by: 'container'
+  },
   cssMode: true,
   slidesPerView: 'auto',
-  loop: true,
-  autoplay: true,
-  disableOnInteraction: false,
+  rewind: true,
+  autoplay: {
+    delay: 5000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false
+  },
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev"
