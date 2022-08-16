@@ -27,29 +27,25 @@ let programSwiper = new Swiper(".programSwiper", {
   }
 });
 
-let imageSwiper = new Swiper(".imageSwiper", {
-  cssMode: true,
-  slidesPerView: 'auto',
-  loop: true,
-  autoplay: true,
-  disableOnInteraction: false,
-  navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-  },
-  pagination: {
-    el: ".feedback-controller",
-    bulletElement: 'a',
-    clickable: true,
-  },
-});
-
 let studentSwiper = new Swiper(".studentSwiper", {
+  slidesPerView: 'auto',
+});
+let commentSwiper = new Swiper(".commentSwiper", {
+  slidesPerView: 'auto',
+});
+let imageSwiper = new Swiper(".imageSwiper", {
+  controller: {
+    control: [studentSwiper, commentSwiper],
+    by: 'container'
+  },
   cssMode: true,
   slidesPerView: 'auto',
-  loop: true,
-  autoplay: true,
-  disableOnInteraction: false,
+  rewind: true,
+  autoplay: {
+    delay: 5000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
