@@ -71,3 +71,46 @@ let courseSwiper = new Swiper(".courseSwiper", {
     }
   }
 });
+
+
+// reserve page 跳轉
+let currentStep = 1;
+function goStep1() {
+  Array.from(document.querySelectorAll('[id^="reserve"]')).forEach(item => {
+    item.classList.add('d-none');
+  });
+  document.querySelector('#reserveInfo').classList.remove('d-none');
+
+  Array.from(document.querySelectorAll('[id^="steps-item"]')).forEach(item => {
+    item.classList.remove('active', 'completed');
+  });
+  document.querySelector('#steps-item1').classList.add('active');
+}
+
+function goStep2() {
+  Array.from(document.querySelectorAll('[id^="reserve"]')).forEach(item => {
+    item.classList.add('d-none');
+  });
+  document.querySelector('#reservePay').classList.remove('d-none');
+
+  Array.from(document.querySelectorAll('[id^="steps-item"]')).forEach(item => {
+    item.classList.remove('active', 'completed');
+  });
+  document.querySelector('#steps-item1').classList.add('completed');
+  document.querySelector('#steps-item2').classList.add('active');
+}
+
+function goStep3() {
+  Array.from(document.querySelectorAll('[id^="reserve"]')).forEach(item => {
+    item.classList.add('d-none');
+  });
+  document.querySelector('#reserveMessage').classList.remove('d-none');
+
+  Array.from(document.querySelectorAll('[id^="steps-item"]')).forEach(item => {
+    item.classList.remove('active', 'completed');
+  });
+
+  document.querySelector('#steps-item1').classList.add('completed');
+  document.querySelector('#steps-item2').classList.add('completed');
+  document.querySelector('#steps-item3').classList.add('active');
+}

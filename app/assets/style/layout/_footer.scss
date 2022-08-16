@@ -1,0 +1,28 @@
+// 主要是要處理在輸入信用卡資訊頁面的畫面資料量過少，導致 footer 卡在一半
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  /* footer 高度 */
+  margin-bottom: 67px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    font-size: 12px;
+    line-height: 14px;
+    font-family: $font-secondary;
+    color: #909090;
+
+    @include md {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

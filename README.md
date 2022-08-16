@@ -1,7 +1,8 @@
-# 網頁切版直播班 Gulp 範例 - 加入 Bootstrap 版本
+# Week6 - Coding Home 程式家教
 
 > Demo: [https://yochi-84.github.io/2022SummerClass-week6/](https://yochi-84.github.io/2022SummerClass-week6/)
 ---
+## 網頁切版直播班 Gulp 範例 - 加入 Bootstrap 版本
 
 > 使用該專案 Gulp 時，就可以不用使用其他編譯工具編譯 SCSS 或是 JavaScript 囉。
 
