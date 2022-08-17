@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -110,7 +111,7 @@
           <div class="reserve-form-block">
             <h3 class="input-form-title mb-lg-12 mb-6">課程報名</h3>
             <h4 class="input-form-subtitle">選擇付款方式</h4>
-            <ul class="d-flex item-tag mb-8">
+            <ul class="d-flex item-tag mb-8" id="tag">
               <li><a href="#" class="active">信用卡付款</a></li>
               <li><a href="#">超商繳款</a></li>
               <li><a href="#">ATM轉帳</a></li>
@@ -141,7 +142,7 @@
               </div>
               <div class="col-lg-6">
                 <label for="date">想預約的日期</label>
-                <input type="date" id="date" />
+                <input type="text" id="date" placeholder="請選擇日期"/>
               </div>
               <div>
                 <label for="place">上課地點</label>
@@ -151,7 +152,7 @@
                 <span class="reserve-form-price">NT$1600</span>
               </div>
               <div class="col-lg-6">
-                <a href="#" class="btn btn-gradient rounded-1 reserve-form-btn"
+                <a href="javascript:goStep2()" class="btn btn-gradient rounded-1 reserve-form-btn"
                   >前往結帳</a
                 >
               </div>
@@ -184,11 +185,12 @@
             id="checkkey"
             placeholder="***"
             class="mb-lg-6 mb-4"
+            maxLength="3"
           />
-          <label for="date">有效日期</label>
+          <label for="expire-date">有效日期</label>
           <input
             type="text"
-            id="date"
+            id="expire-date"
             placeholder="(MM-YY)"
             class="mb-lg-6 mb-4"
           />
@@ -197,7 +199,7 @@
               <small class="reserve-form-price">NT$1600</small>
             </div>
             <div class="col-lg-8">
-              <a href="#" class="btn btn-gradient rounded-1 reserve-form-btn"
+              <a href="javascript:goStep3()" class="btn btn-gradient rounded-1 reserve-form-btn"
                 >下一步</a
               >
             </div>
@@ -255,6 +257,8 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>

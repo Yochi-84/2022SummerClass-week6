@@ -70,7 +70,18 @@ var courseSwiper = new Swiper(".courseSwiper", {
       spaceBetween: 16
     }
   }
-}); // reserve page 跳轉
+});
+
+if (document.querySelector('#tag')) {
+  Array.from(document.querySelectorAll('.item-tag a')).forEach(function (item) {
+    item.onclick = function (e) {
+      e.preventDefault();
+      document.querySelector('.item-tag a[class="active"]').classList.remove('active');
+      this.classList.add('active');
+    };
+  });
+} // reserve page 跳轉
+
 
 var currentStep = 1;
 
@@ -108,5 +119,52 @@ function goStep3() {
   document.querySelector('#steps-item1').classList.add('completed');
   document.querySelector('#steps-item2').classList.add('completed');
   document.querySelector('#steps-item3').classList.add('active');
+}
+
+if (document.querySelector('#date')) {
+  var date = document.querySelector('#date');
+  var datepicker = new Datepicker(date, {
+    autohide: true,
+    language: 'zh-TW'
+  });
+}
+
+if (document.querySelector('#expire-date')) {
+  var expireDate = document.querySelector('#expire-date');
+  var expireDatepicker = new Datepicker(expireDate, {
+    autohide: true,
+    format: 'mm/yy',
+    startView: 2,
+    pickLevel: 1,
+    language: 'zh-TW'
+  });
+} // 信用卡格式限制
+
+
+if (document.querySelector('#account')) {
+  var lastLength = 0;
+  var lastValue = '';
+  document.querySelector('#account').addEventListener('input', function () {
+    var value = this.value;
+    this.value = this.value.replace(/[^-\d]/g, '');
+    var length = this.value.length;
+
+    if (length < 19) {
+      if (length > lastLength) {
+        if (length % 4 === Math.floor(length / 4) - 1) {
+          this.value = this.value + '-';
+          lastLength += 2;
+        } else {
+          lastLength++;
+        }
+      } else {
+        lastLength = length;
+      }
+    } else if (length === 19) {} else {
+      this.value = lastValue;
+    }
+
+    lastValue = this.value;
+  });
 }
 //# sourceMappingURL=all.js.map

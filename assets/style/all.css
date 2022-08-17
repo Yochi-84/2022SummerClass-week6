@@ -16316,6 +16316,7 @@ body {
   border: 1px solid #fff;
   border-radius: 4px;
   color: #fff;
+  font-family: "Noto Sans TC";
 }
 
 .input-form input::-webkit-input-placeholder, .input-form select::-webkit-input-placeholder {
@@ -16337,6 +16338,11 @@ body {
 .input-form input::placeholder,
 .input-form select::placeholder {
   color: #C1C1C1;
+}
+
+.input-form select {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .login-modal .modal-body {
@@ -17610,6 +17616,10 @@ body {
 .message .btn {
   font-size: 18px;
   line-height: 26px;
+}
+
+.datepicker-picker {
+  color: #000;
 }
 
 .border-gradient::after {
