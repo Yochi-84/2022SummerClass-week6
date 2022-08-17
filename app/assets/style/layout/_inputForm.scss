@@ -36,9 +36,15 @@
     border: 1px solid $white;
     border-radius: 4px;
     color: $white;
+    font-family: $font-primary;
 
     &::placeholder {
       color: $gray;
     }
+  }
+
+  select {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
