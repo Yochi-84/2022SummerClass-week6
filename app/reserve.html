@@ -82,11 +82,11 @@ current: reserve
               </div>
               <div class="col-lg-6 pe-lg-6">
                 <label for="course">課程</label>
-                <select name="course" id="course">
-                  <option value="1">1 堂 50 分鐘</option>
-                  <option value="2">3 堂 50 分鐘</option>
-                  <option value="3" selected>10 堂 50 分鐘</option>
-                  <option value="4">20 堂 50 分鐘</option>
+                <select name="course" id="course" onchange="changePrice(this.value)">
+                  <option value="1600">1 堂 50 分鐘</option>
+                  <option value="1400">3 堂 50 分鐘</option>
+                  <option value="1000" selected>10 堂 50 分鐘</option>
+                  <option value="900">20 堂 50 分鐘</option>
                 </select>
               </div>
               <div class="col-lg-6">

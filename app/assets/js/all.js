@@ -143,6 +143,10 @@ if (document.querySelector('#expire-date')) {
   });
 }
 
+function changePrice(val) {
+  document.querySelector('.reserve-form-price').innerText = `NT$${val}`;
+}
+
 // 信用卡格式限制
 if (document.querySelector('#account')) {
   let lastLength = 0;
