@@ -138,6 +138,10 @@ if (document.querySelector('#expire-date')) {
     pickLevel: 1,
     language: 'zh-TW'
   });
+}
+
+function changePrice(val) {
+  document.querySelector('.reserve-form-price').innerText = "NT$".concat(val);
 } // 信用卡格式限制
 
 

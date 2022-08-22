@@ -133,11 +133,11 @@
               </div>
               <div class="col-lg-6 pe-lg-6">
                 <label for="course">課程</label>
-                <select name="course" id="course">
-                  <option value="1">1 堂 50 分鐘</option>
-                  <option value="2">3 堂 50 分鐘</option>
-                  <option value="3" selected>10 堂 50 分鐘</option>
-                  <option value="4">20 堂 50 分鐘</option>
+                <select name="course" id="course" onchange="changePrice(this.value)">
+                  <option value="1600">1 堂 50 分鐘</option>
+                  <option value="1400">3 堂 50 分鐘</option>
+                  <option value="1000" selected>10 堂 50 分鐘</option>
+                  <option value="900">20 堂 50 分鐘</option>
                 </select>
               </div>
               <div class="col-lg-6">
@@ -235,7 +235,7 @@
 
 
     <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="Label" aria-hidden="true" data-bs-backdrop="false">
-      <div class="modal-dialog modal-lg login-modal modal-dialog-centered">
+      <div class="modal-dialog modal-md modal-lg login-modal modal-dialog-centered">
         <div class="modal-content bg-light rounded-0 border">
           <div class="modal-body">
             <div class="modal-block input-form">
@@ -249,8 +249,8 @@
                 <a href="#" class="btn btn-gradient btn-fluid rounded-ssm">登入</a>
               </form>
               <h5 class="other-method">其他登入方式</h5>
-              <a href="#" class="btn btn-outline-white btn-fluid rounded-ssm mb-4 mb-md-6"><img src="./assets/images/icon_fb.svg" alt="Facebook" class="me-8 me-md-14">Facebook 登入</a>
-              <a href="#" class="btn btn-outline-white btn-fluid rounded-ssm"><img src="./assets/images/icon_google.svg" alt="Google" class="me-8 me-md-14">Google 登入</a>
+              <a href="#" class="btn btn-outline-white btn-fluid rounded-ssm mb-4 mb-md-6 text-md-start"><img src="./assets/images/icon_fb.svg" alt="Facebook" class="me-8 me-lg-14">Facebook 登入</a>
+              <a href="#" class="btn btn-outline-white btn-fluid rounded-ssm text-md-start"><img src="./assets/images/icon_google.svg" alt="Google" class="me-8 me-lg-14">Google 登入</a>
             </div>
           </div>
         </div>
