@@ -4,6 +4,7 @@
     line-height: 35px;
     font-weight: 700;
     text-align: center;
+    color: $white;
   }
 
   &-subtitle {
@@ -19,8 +20,6 @@
 
   label {
     display: block;
-    margin-bottom: 0.5rem;
-    color: $gray;
     font-family: $font-primary;
 
     @include lg {
@@ -31,20 +30,5 @@
   input,
   select {
     width: 100%;
-    background-color: $dark;
-    padding: 0.5rem 1rem;
-    border: 1px solid $white;
-    border-radius: 4px;
-    color: $white;
-    font-family: $font-primary;
-
-    &::placeholder {
-      color: $gray;
-    }
-  }
-
-  select {
-    font-size: 16px;
-    line-height: 1.5;
   }
 }

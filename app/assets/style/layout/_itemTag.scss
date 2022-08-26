@@ -52,3 +52,7 @@
     }
   }
 }
+
+.swiper-free-mode > .swiper-wrapper {
+  transition-timing-function: linear;
+}
